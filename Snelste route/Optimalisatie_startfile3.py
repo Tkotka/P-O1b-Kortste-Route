@@ -356,7 +356,9 @@ def solve(board, opl, start=(0, 0), finish=(0, 0), partial_solution=None,teller=
     exam = examine(board, partial_solution, opl, finish)
     if exam == ACCEPT:
         partial_time = calculateTime(partial_solution)
-        if len(opl) == 0:
+        if exam[::-1] in opl:
+            pass
+        elif len(opl) == 0:
             fastest_time = partial_time
             print(partial_time) # purely informational
             opl.append(fastest_time) # first element in opl is the time
