@@ -379,7 +379,7 @@ def solve(board, opl, start=(0, 0), finish=(0, 0), partial_solution=None,teller=
                 teller += 1
                 print(teller)
             for solution in extended_solutions:
-                solve(board, opl, start, finish, solution)
+                solve(board, opl, start, finish, solution,teller)
 
 
 def fastest_route(board, start=(0, 0), finish=(0, 0)):
