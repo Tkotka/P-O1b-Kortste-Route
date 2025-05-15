@@ -88,6 +88,7 @@ def main3():
     input("Continue? ")
 
     route = fastest_route(board_presentatie)
-
+    for opl in route:
+        print(opl)
 
 main3()
