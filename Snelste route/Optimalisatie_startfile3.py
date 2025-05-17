@@ -1,7 +1,7 @@
 #import time
 
-TIMESTRAIGHT = 2.5  # tijd nodig om één vakje vooruit te rijden
-TIMETURN = 2  # tijd nodig om binnen één vakje een kwart slag te draaien
+TIMESTRAIGHT = 2.5  # tijd nodig om een vakje vooruit te rijden
+TIMETURN = 2  # tijd nodig om binnen een vakje een kwart slag te draaien
 
 ACCEPT = 'accept'
 ABANDON = 'abandon'
