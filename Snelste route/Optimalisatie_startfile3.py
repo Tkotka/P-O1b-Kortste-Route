@@ -340,7 +340,7 @@ def extend(partial_solution):
     last_pos = partial_solution[-1]
     for i in [-1, 1]: # this is a list, not a range or whatever
         new_solution1 = partial_solution.copy()
-        new_solution1.append((last_pos[0] - i, last_pos[1]))
+        new_solution1.append((last_pos[0] - i, last_pos[1])) # Reversed order to speed up the algorithm
         extended_solutions.append(new_solution1)
         new_solution2 = partial_solution.copy()
         new_solution2.append((last_pos[0], last_pos[1] - i))
@@ -349,16 +349,16 @@ def extend(partial_solution):
 
 
 def solve(board, opl, start=(0, 0), finish=(0, 0), partial_solution=None,teller=None):
-    if teller is None:
+    if teller is None: # diagnostic purposes
         teller = 0
     if partial_solution is None:
         partial_solution = [start]
     exam = examine(board, partial_solution, opl, finish)
     if exam == ACCEPT:
         partial_time = calculateTime(partial_solution)
-        if exam[::-1] in opl:
+        if exam[::-1] in opl: # Kills reverse-order routes
             pass
-        elif len(opl) == 0:
+        elif len(opl) == 0: # No routes added yet
             fastest_time = partial_time
             print(partial_time) # purely informational
             opl.append(fastest_time) # first element in opl is the time
@@ -377,7 +377,7 @@ def solve(board, opl, start=(0, 0), finish=(0, 0), partial_solution=None,teller=
     else:
         if exam == CONTINUE:
             extended_solutions = extend(partial_solution)
-            if len(opl) == 0:
+            if len(opl) == 0: # Diagnostic purposes
                 teller += 1
                 print(teller)
             for solution in extended_solutions:
