@@ -1,6 +1,6 @@
 import time
 
-from Optimalisatie_startfile3 import *
+from Optimalisatie import *
 
 def main():
     opl = [

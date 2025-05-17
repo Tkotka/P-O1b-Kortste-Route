@@ -2,7 +2,7 @@ import time
 
 from PIL.DdsImagePlugin import item1
 
-from Optimalisatie_startfile3 import *
+from Optimalisatie import *
 
 import math
 counter = 1

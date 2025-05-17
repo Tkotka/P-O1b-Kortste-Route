@@ -1,7 +1,7 @@
 import time
 from random import randint
 
-from Optimalisatie_startfile3 import *
+from Optimalisatie import *
 
 
 def random_red_green_arrangement(board,nbGreens,nbReds):
