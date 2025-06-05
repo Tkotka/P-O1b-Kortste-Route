@@ -37,8 +37,8 @@ def main():
         print("")
         board_point = board_presentatie[point[0]][point[1]]
         if board_point == "x":
-            board_presentatie[point[0]][point[1]] = "X"
-        elif board_point != "X":
+            board_presentatie[point[0]][point[1]] = "O"
+        elif board_point != "O":
             board_presentatie[point[0]][point[1]] = "x"
         for row in board_presentatie:
             print(row)
